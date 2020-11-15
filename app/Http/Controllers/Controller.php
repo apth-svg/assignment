@@ -10,4 +10,11 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function index(){
+        $data=[
+            'contact_key'=>'contact_value'
+        ];
+        return view('contact',compact('data'));
+    }
 }
